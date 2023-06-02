@@ -5,5 +5,5 @@ export const StyledTweetList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 auto 40px;
+  margin: 0 auto 36px;
 `;
