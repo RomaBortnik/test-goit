@@ -1,18 +1,20 @@
 import TweetListItem from 'components/TweetListItem';
-import { StyledContactList } from './TweetList.styled';
+
+import { StyledTweetList } from './TweetList.styled';
 
 const TweetList = ({ tweets }) => {
   return (
-    <StyledContactList>
-      {tweets.map(({ user, tweets, id, avatar }) => (
+    <StyledTweetList>
+      {tweets.map(({ user, tweets, id, avatar, followers }) => (
         <TweetListItem
           key={id}
           name={user}
           tweets={tweets}
           avatar={avatar}
+          followers={followers}
         ></TweetListItem>
       ))}
-    </StyledContactList>
+    </StyledTweetList>
   );
 };
 
