@@ -1,17 +1,18 @@
-import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { deleteContact } from 'redux/contacts/operations';
-import { Contact, ContactBtn } from './ContactListItem.styled';
-
-const ContactListItem = ({ name, number, id }) => {
-  const dispatch = useDispatch();
+const ContactListItem = ({ name, tweets, avatar }) => {
   return (
     <>
-      <Contact>
-        {name}: {number}
+      <div>
+        <div>name: {name}</div>
+        <div>tweets: {tweets}</div>
+        <img src={avatar} alt="" />
+        <div>avatar: {avatar}</div>
+      </div>
+      {/* <Contact>
+        {name}: {name}
         <ContactBtn
           onClick={() => {
             toast.success(`${name} removed from the contact list.`);
@@ -21,7 +22,7 @@ const ContactListItem = ({ name, number, id }) => {
         >
           Delete
         </ContactBtn>
-      </Contact>
+      </Contact> */}
       <ToastContainer autoClose={2000} theme="dark" />
     </>
   );
@@ -29,8 +30,8 @@ const ContactListItem = ({ name, number, id }) => {
 
 ContactListItem.propTypes = {
   name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  tweets: PropTypes.number.isRequired,
+  avatar: PropTypes.string.isRequired,
 };
 
 export default ContactListItem;
