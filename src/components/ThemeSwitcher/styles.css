@@ -1,0 +1,100 @@
+@import '~@flaticon/flaticon-uicons/css/all/all';
+
+.container {
+  height: 24px;
+  width: 56px;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(253, 203, 50, 1) 0%,
+    rgba(244, 56, 98, 1) 100.2%
+  );
+  border-radius: 28px;
+  padding: 0 2px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* @media screen and (min-width: 768px) {
+    height: 24px;
+    width: 56px;
+    padding: 0 2px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    height: 24px;
+    width: 56px;
+  }
+
+  @media screen and (max-height: 375px) {
+    height: 24px;
+    width: 56px;
+    padding: 0 2px;
+  } */
+}
+.handle {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background-color: #fff;
+  overflow: hidden;
+
+  /* @media screen and (min-width: 768px) {
+    height: 22px;
+    width: 22px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    height: 24px;
+    width: 24px;
+  }
+
+  @media screen and (max-height: 375px) {
+    height: 22px;
+    width: 22px;
+  } */
+}
+.icon {
+  color: #f88748;
+  height: 18px;
+  width: 18px;
+  font-size: 18px;
+
+  /* @media screen and (min-width: 768px) {
+    height: 16px;
+    width: 16px;
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    height: 18px;
+    width: 18px;
+    font-size: 18px;
+  }
+
+  @media screen and (max-height: 375px) {
+    height: 18px;
+    width: 18px;
+    font-size: 18px;
+  } */
+}
+.container[data-darkmode='dark'] {
+  background-color: #52527a;
+}
+
+.container[data-darkmode='dark'] {
+  background-image: linear-gradient(
+    109.8deg,
+    rgba(62, 5, 116, 1) -5.2%,
+    rgba(41, 14, 151, 1) -5.2%,
+    rgba(216, 68, 148, 1) 103.3%
+  );
+}
+
+.container[data-darkmode='dark'] .icon {
+  color: #501a96;
+}

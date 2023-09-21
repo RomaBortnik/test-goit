@@ -1,11 +1,19 @@
-import { StyledNavLink, MainNav } from './Navigation.styled';
+import ThemeSwitcher from 'components/ThemeSwitcher';
+import { sections } from 'utils/sections';
+import { NavList, NavListItem } from './Navigation.styled';
 
-const Navigation = () => {
+const Navigation = ({ onThemeChange, onClose }) => {
   return (
-    <MainNav>
-      <StyledNavLink to="/">Home</StyledNavLink>
-      <StyledNavLink to="/tweets">Tweets</StyledNavLink>
-    </MainNav>
+    <NavList>
+      {sections.map((section, index) => (
+        <NavListItem onClick={onClose} key={index}>
+          <a href={`#${section.toLowerCase()}`}>{section}</a>
+        </NavListItem>
+      ))}
+      <NavListItem>
+        <ThemeSwitcher onThemeChange={onThemeChange} />
+      </NavListItem>
+    </NavList>
   );
 };
 
